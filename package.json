@@ -1,0 +1,38 @@
+{
+  "name": "agentgate",
+  "version": "0.1.0",
+  "description": "A checkpoint between AI agents that screens every message for prompt injection, leaked secrets, and out-of-bounds tool calls before it gets through.",
+  "type": "module",
+  "bin": {
+    "agentgate": "./dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "test": "npm run build && node --test dist/__tests__/*.test.js"
+  },
+  "keywords": [
+    "ai",
+    "security",
+    "agents",
+    "prompt-injection",
+    "cli",
+    "proxy",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.124.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.0",
+    "typescript": "^7.0.2"
+  }
+}
